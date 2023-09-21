@@ -1,0 +1,85 @@
+using System;
+
+internal class Program
+{
+    static void main(string[]args)
+    {
+        Console.WriteLine("welcome to system!");
+        Console.WriteLine();
+
+        Console.Write("enter your name ");
+        string username = Console.ReadLine();
+
+
+        string correctPassword = "pass";
+        string enteredpassword;
+
+
+
+        Console.WriteLine("enter the password: ");
+        enteredpassword = Console.ReadLine();
+
+        while (enteredpassword != correctPassword)
+        {
+            Console.WriteLine("the password is wrong . try again. ");
+            enteredpassword = Console.ReadLine();
+
+         }
+
+        Console.Clear();
+
+        Console.WriteLine("hello" + username + "!welcome to the system! ");
+
+        bool isexit = false;
+        int menuItem;
+
+        
+        while (isexit) // ==> (isexit is true)
+
+        {
+            Console.WriteLine("---menu---");
+            Console.WriteLine("1 - join the class");
+            Console.WriteLine("2 - check the schedule");
+            Console.WriteLine("3 - quit the class");
+
+            Console.WriteLine();
+
+            Console.WriteLine("choose a menu ıtem: ");
+            menuItem = Convert.ToInt32(Console.ReadLine());
+
+            switch (menuItem)
+            {
+                case 1:
+                    Console.Clear();
+                    Console.WriteLine("you are joining the class... ");
+                    Console.WriteLine("\nTo return to the main menu ,press any key... ");
+                    Console.ReadKey();
+                    break;
+                case 2:
+                    Console.Clear();
+                    Console.WriteLine("you are checking the schedule... ");
+                    Console.WriteLine("\nTo return to the main menu ,press any key... ");
+                    Console.ReadKey();
+                    break;
+                case 3:
+                    Console.Clear();
+                    Console.WriteLine("good bye " + username);
+                    isexit = true;
+                    break;
+                default:
+                    Console.Clear();
+                    Console.WriteLine("ınvalıd choıce. please enter a menu item again");
+                    break;
+
+            }
+
+
+
+        }
+
+        Console.ReadKey();
+
+    }
+
+
+}
